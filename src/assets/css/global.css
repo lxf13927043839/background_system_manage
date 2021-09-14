@@ -1,0 +1,27 @@
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.el-card {
+    margin-top: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.1) !important;
+}
+.el-table {
+    margin-top: 15px;
+    font-size: 12px;
+}
+.el-pagination {
+    margin-top: 15px;
+}
+/* 设置级联高度 */
+.el-cascader-menu{
+    height: 300px;
+}
+
+.ql-editor {
+    min-height: 300px;
+}
