@@ -277,11 +277,11 @@ export default {
         })
 
         if (data.meta.status === 200) {
-          this.$message.error('成功更新数据')
+          this.$message.success('成功更新数据')
           // 刷新数据
           this.getUserListData()
         } else {
-          this.$message.success('更新数据失败，请重新尝试')
+          this.$message.error('更新数据失败，请重新尝试')
         }
         // 关闭对话框
         this.editDialogVisible = false
@@ -332,9 +332,10 @@ export default {
       if (data.meta.status !== 200) {
         return this.$message.error('设置角色信息失败')
       }
+      console.log(data.data)
       // 配置后要刷新数据
       this.getUserListData()
-      this.$message.success('成功分配角色')
+      this.$message.success('成功分配角色, 后台返回的数据是有问题，返回的一直是超级管理员')
       this.setRoleDialogVisible = false
     },
     // 处理分配角色对话框关闭
