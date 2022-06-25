@@ -16,8 +16,10 @@ import Nprogress from 'nprogress'
 // import 'nprogress/nprogress.css'
 
 Vue.use(VueQuillEditor)
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
-axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 下面的端口已经失效了
+// axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+
 // 在request拦截器中，添加.start
 axios.interceptors.request.use(config => {
   Nprogress.start()

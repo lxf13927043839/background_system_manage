@@ -27,8 +27,9 @@ import 'nprogress/nprogress.css'
 Vue.use(VueQuillEditor)
 
 // 这里地址的修改会影响到图片的上传
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
-axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
+// 不要改到打包模式去了
+axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 // 在request拦截器中，添加.start
 axios.interceptors.request.use(config => {
   Nprogress.start()
